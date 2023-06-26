@@ -5,6 +5,7 @@ import __yyfmt__ "fmt"
 
 import (
 	"bytes"
+	"sort"
 )
 
 type PlexMatch struct {
@@ -97,7 +98,21 @@ func Marshal(p PlexMatch) []byte {
 	if p.Season != 0 {
 		buf.WriteString(__yyfmt__.Sprintf("season: %d\n\n", p.Season))
 	}
+	sort.SliceStable(p.Episodes, func(i, j int) bool {
+		if p.Episodes[i].Special {
+			return true
+		}
+		if p.Episodes[j].Special {
+			return false
+		}
+		return p.Episodes[i].ID < p.Episodes[j].ID
+	})
+	ep := Episode{}
 	for _, v := range p.Episodes {
+		if v.ID == ep.ID && v.Special == ep.Special {
+			continue
+		}
+		ep = v
 		sp := ""
 		if v.Special {
 			sp = "SP"

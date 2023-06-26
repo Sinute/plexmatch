@@ -44,7 +44,7 @@ state 2
 	TVDBHint  shift 15
 	IMDBHint  shift 16
 	EpisodeHint  shift 20
-	.  reduce 1 (src line 64)
+	.  reduce 1 (src line 65)
 
 	hint  goto 21
 	title  goto 4
@@ -60,49 +60,49 @@ state 2
 state 3
 	hints:  hint.    (3)
 
-	.  reduce 3 (src line 74)
+	.  reduce 3 (src line 75)
 
 
 state 4
 	hint:  title.    (4)
 
-	.  reduce 4 (src line 79)
+	.  reduce 4 (src line 80)
 
 
 state 5
 	hint:  show.    (5)
 
-	.  reduce 5 (src line 83)
+	.  reduce 5 (src line 84)
 
 
 state 6
 	hint:  tmdbID.    (6)
 
-	.  reduce 6 (src line 87)
+	.  reduce 6 (src line 88)
 
 
 state 7
 	hint:  tvdbID.    (7)
 
-	.  reduce 7 (src line 91)
+	.  reduce 7 (src line 92)
 
 
 state 8
 	hint:  imdbID.    (8)
 
-	.  reduce 8 (src line 95)
+	.  reduce 8 (src line 96)
 
 
 state 9
 	hint:  year.    (9)
 
-	.  reduce 9 (src line 99)
+	.  reduce 9 (src line 100)
 
 
 state 10
 	hint:  season.    (10)
 
-	.  reduce 10 (src line 103)
+	.  reduce 10 (src line 104)
 
 
 11: shift/reduce conflict (shift 20(0), red'n 11(0)) on EpisodeHint
@@ -111,7 +111,7 @@ state 11
 	episodes:  episodes.episode 
 
 	EpisodeHint  shift 20
-	.  reduce 11 (src line 107)
+	.  reduce 11 (src line 108)
 
 	episode  goto 22
 
@@ -168,7 +168,7 @@ state 18
 state 19
 	episodes:  episode.    (21)
 
-	.  reduce 21 (src line 155)
+	.  reduce 21 (src line 156)
 
 
 state 20
@@ -182,13 +182,13 @@ state 20
 state 21
 	hints:  hints hint.    (2)
 
-	.  reduce 2 (src line 70)
+	.  reduce 2 (src line 71)
 
 
 state 22
 	episodes:  episodes episode.    (20)
 
-	.  reduce 20 (src line 151)
+	.  reduce 20 (src line 152)
 
 
 state 23
@@ -254,31 +254,31 @@ state 30
 state 31
 	title:  TitleHint ':' Str.    (12)
 
-	.  reduce 12 (src line 112)
+	.  reduce 12 (src line 113)
 
 
 state 32
 	show:  ShowHint ':' Str.    (13)
 
-	.  reduce 13 (src line 117)
+	.  reduce 13 (src line 118)
 
 
 state 33
 	tmdbID:  TMDBHint ':' Int.    (14)
 
-	.  reduce 14 (src line 122)
+	.  reduce 14 (src line 123)
 
 
 state 34
 	tvdbID:  TVDBHint ':' Int.    (15)
 
-	.  reduce 15 (src line 127)
+	.  reduce 15 (src line 128)
 
 
 state 35
 	imdbID:  IMDBHint ':' Int.    (16)
 
-	.  reduce 16 (src line 132)
+	.  reduce 16 (src line 133)
 
 
 state 36
@@ -291,13 +291,13 @@ state 36
 state 37
 	year:  YearHint ':' Int.    (18)
 
-	.  reduce 18 (src line 141)
+	.  reduce 18 (src line 142)
 
 
 state 38
 	season:  SeasonHint ':' Int.    (19)
 
-	.  reduce 19 (src line 146)
+	.  reduce 19 (src line 147)
 
 
 state 39
@@ -338,13 +338,13 @@ state 43
 state 44
 	imdbID:  IMDBHint ':' 't' 't' Int.    (17)
 
-	.  reduce 17 (src line 136)
+	.  reduce 17 (src line 137)
 
 
 state 45
 	episode:  EpisodeHint ':' Int ':' Str.    (22)
 
-	.  reduce 22 (src line 160)
+	.  reduce 22 (src line 161)
 
 
 state 46
@@ -357,7 +357,7 @@ state 46
 state 47
 	episode:  EpisodeHint ':' Special Int ':' Str.    (23)
 
-	.  reduce 23 (src line 164)
+	.  reduce 23 (src line 165)
 
 
 18 terminals, 13 nonterminals
