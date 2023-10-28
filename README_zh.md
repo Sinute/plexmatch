@@ -1,4 +1,4 @@
-[English readme](README.md) 
+[English](README.md) 
 
 # 介绍
 
@@ -14,7 +14,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/Sinute/plexmatch"
+	"github.com/sinute/plexmatch"
 )
 
 func main() {
@@ -68,7 +68,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/Sinute/plexmatch"
+	"github.com/sinute/plexmatch"
 )
 
 func main() {

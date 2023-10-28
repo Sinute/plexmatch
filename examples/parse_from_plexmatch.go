@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/Sinute/plexmatch"
+	"github.com/sinute/plexmatch"
 )
 
 func main() {
